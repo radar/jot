@@ -3,7 +3,7 @@
 require_relative "lib/jot/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "jot"
+  spec.name = "jot-helpers"
   spec.version = Jot::VERSION
   spec.authors = ["Ryan Bigg"]
   spec.email = ["me@ryanbigg.com"]
