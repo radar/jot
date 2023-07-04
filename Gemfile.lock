@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jot (1.0.0)
+    jot-helpers (1.0.0.beta3)
       jwt (~> 2)
 
 GEM
@@ -28,7 +28,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  jot!
+  jot-helpers!
   rake (~> 13.0)
   rspec (~> 3.0)
 
