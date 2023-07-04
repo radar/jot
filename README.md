@@ -18,13 +18,13 @@ end
 Encode a payload:
 
 ```ruby
-JOT.encode({ user_id: 1 }) # => "eyJhbGciOiJIUz..."
+Jot.encode({ user_id: 1 }) # => "eyJhbGciOiJIUz..."
 ```
 
 Decode a payload:
 
 ```ruby
-JOT.decode("eyJhbGciOiJIUz...") # => { "user_id" => 1 }
+Jot.decode("eyJhbGciOiJIUz...") # => { "user_id" => 1 }
 ```
 
 Exceptions raised for invalid / expired tokens will be the same as those raised by the JWT gem.
