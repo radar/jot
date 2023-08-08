@@ -27,4 +27,11 @@ Decode a payload:
 Jot.decode("eyJhbGciOiJIUz...") # => { "user_id" => 1 }
 ```
 
+Decode a payload and get the header information too:
+
+```ruby
+Jot.original_decode("eyJhbGciOiJIUz") # => [{ "user_id" => 1 }, { "alg" => "HS256" }]
+
+```
+
 Exceptions raised for invalid / expired tokens will be the same as those raised by the JWT gem.

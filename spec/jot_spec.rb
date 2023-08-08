@@ -16,6 +16,11 @@ RSpec.describe Jot do
 
   it "decodes a token using the configured algorithm and secret" do
     token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.AB5QoOZ8EYxtqbHd5CTdZOwZjUyHpazJVVCk0zejBAI"
-    expect(Jot.decode(token)).to eq([payload, { "alg" => "HS256" }])
+    expect(Jot.decode(token)).to eq(payload)
+  end
+
+  it "decodes a token using the configured algorithm and secret, showing algorithm info" do
+    token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.AB5QoOZ8EYxtqbHd5CTdZOwZjUyHpazJVVCk0zejBAI"
+    expect(Jot.original_decode(token)).to eq([payload, { "alg" => "HS256" }])
   end
 end

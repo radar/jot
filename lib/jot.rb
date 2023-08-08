@@ -20,6 +20,11 @@ class Jot
   end
 
   def self.decode(payload, verify: true)
+    data, _algorithm = original_decode(payload, verify: verify)
+    data
+  end
+
+  def self.original_decode(payload, verify: true)
     JWT.decode(payload, config.secret, verify, { algorithm: config.algorithm })
   end
 end
