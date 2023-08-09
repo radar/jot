@@ -7,7 +7,7 @@ RSpec.describe Jot do
       config.secret = "super special secret"
     end
 
-    Timecop.freeze("2023-01-01 09:00:00")
+    Timecop.freeze("2023-01-01 09:00:00 +1000")
   end
 
   let(:payload) { { "user_id" => 1 } }
