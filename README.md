@@ -13,6 +13,12 @@ Jot.configure do |config|
 end
 ```
 
+You may wish to also specify the expiration time for tokens as well. The default is 1 hour, but it can be overridden:
+
+```ruby
+  config.expiration_time_in_seconds = 1500 # 25 minutes
+```
+
 ## Usage
 
 Encode a payload:

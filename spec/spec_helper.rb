@@ -1,4 +1,5 @@
 require 'jot'
+require 'timecop'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

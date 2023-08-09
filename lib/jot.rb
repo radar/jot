@@ -16,7 +16,8 @@ class Jot
   end
 
   def self.encode(payload)
-    JWT.encode(payload, config.secret, config.algorithm)
+    exp = payload[:exp] || Time.now + config.expiration_time_in_seconds
+    JWT.encode(payload.merge(exp: exp.to_i), config.secret, config.algorithm)
   end
 
   def self.decode(payload, verify: true)
