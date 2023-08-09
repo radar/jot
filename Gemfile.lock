@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jot-helpers (1.0.0)
+    jot-helpers (1.1.0)
       jwt (~> 2)
 
 GEM
